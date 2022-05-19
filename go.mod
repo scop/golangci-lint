@@ -62,7 +62,7 @@ require (
 	github.com/moricho/tparallel v0.2.1
 	github.com/nakabonne/nestif v0.3.1
 	github.com/nishanths/exhaustive v0.7.11
-	github.com/nishanths/predeclared v0.2.1
+	github.com/nishanths/predeclared v0.2.2
 	github.com/pkg/errors v0.9.1
 	github.com/polyfloyd/go-errorlint v0.0.0-20211125173453-6d6d39c5bb8b
 	github.com/prometheus/procfs v0.6.0 // indirect
@@ -96,7 +96,7 @@ require (
 	github.com/yagipy/maintidx v1.0.0
 	github.com/yeya24/promlinter v0.1.1-0.20210918184747-d757024714a1
 	gitlab.com/bosi/decorder v0.2.1
-	golang.org/x/tools v0.1.9
+	golang.org/x/tools v0.1.10
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
 	honnef.co/go/tools v0.2.2
 	mvdan.cc/gofumpt v0.2.1
