@@ -72,7 +72,7 @@ require (
 	github.com/sanposhiho/wastedassign/v2 v2.0.6
 	github.com/securego/gosec/v2 v2.9.6
 	github.com/shazow/go-diff v0.0.0-20160112020656-b6b7b6733b8c
-	github.com/shirou/gopsutil/v3 v3.22.1
+	github.com/shirou/gopsutil/v3 v3.23.1
 	github.com/sirupsen/logrus v1.8.1
 	github.com/sivchari/containedctx v1.0.1
 	github.com/sivchari/tenv v1.4.7
@@ -82,7 +82,7 @@ require (
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.10.1
 	github.com/ssgreg/nlreturn/v2 v2.2.1
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.8.1
 	github.com/sylvia7788/contextcheck v1.0.4
 	github.com/tdakkota/asciicheck v0.1.1
 	github.com/tetafro/godot v1.4.11
@@ -97,7 +97,7 @@ require (
 	github.com/yeya24/promlinter v0.1.1-0.20210918184747-d757024714a1
 	gitlab.com/bosi/decorder v0.2.1
 	golang.org/x/tools v0.1.9
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+	gopkg.in/yaml.v3 v3.0.1
 	honnef.co/go/tools v0.2.2
 	mvdan.cc/gofumpt v0.2.1
 	mvdan.cc/interfacer v0.0.0-20180901003855-c20040233aed
