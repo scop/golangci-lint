@@ -6,7 +6,7 @@ require (
 	4d63.com/gochecknoglobals v0.1.0
 	github.com/Antonboom/errname v0.1.5
 	github.com/Antonboom/nilnil v0.1.0
-	github.com/BurntSushi/toml v1.0.0
+	github.com/BurntSushi/toml v1.2.1
 	github.com/Djarvur/go-err113 v0.0.0-20210108212216-aea10b59be24
 	github.com/OpenPeeDeeP/depguard v1.1.0
 	github.com/alexkohler/prealloc v1.0.0
@@ -96,9 +96,9 @@ require (
 	github.com/yagipy/maintidx v1.0.0
 	github.com/yeya24/promlinter v0.1.1-0.20210918184747-d757024714a1
 	gitlab.com/bosi/decorder v0.2.1
-	golang.org/x/tools v0.1.9
+	golang.org/x/tools v0.4.1-0.20221208213631-3f74d914ae6d
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
-	honnef.co/go/tools v0.2.2
+	honnef.co/go/tools v0.4.3
 	mvdan.cc/gofumpt v0.2.1
 	mvdan.cc/interfacer v0.0.0-20180901003855-c20040233aed
 	mvdan.cc/lint v0.0.0-20170908181259-adc824a0674b // indirect
