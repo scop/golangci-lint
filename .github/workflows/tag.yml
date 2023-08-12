@@ -32,8 +32,8 @@ jobs:
         run: |
           gem install --no-document --user-install --bindir ~/.local/bin package_cloud
           export CLICOLOR_FORCE=1
-          # deb: armv6 clashes with armv7, no loong64/mips64 support
-          ~/.local/bin/package_cloud push ${{ github.repository }}/any/any $(ls -1 dist/*.deb | grep -vE 'armv6|loong64|mips64')
-          ~/.local/bin/package_cloud push ${{ github.repository }}/rpm_any/rpm_any dist/*.rpm
+          # deb: armv6 clashes with armv7, no loong64/mips64/riscv64 support (mips64le ok?)
+          for f in $(ls -1 dist/*.deb | grep -vwE 'armv6'); do ~/.local/bin/package_cloud push ${{ github.repository }}/any/any $f || true; done
+          for f in $(ls -1 dist/*.rpm); do ~/.local/bin/package_cloud push ${{ github.repository }}/rpm_any/rpm_any $f || true; done
         env:
           PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}
