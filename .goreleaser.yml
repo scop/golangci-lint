@@ -2,9 +2,9 @@
 project_name: golangci-lint
 
 release:
-  github:
-    owner: scop
-    name: golangci-lint
+  #github:
+  #  owner: scop
+  #  name: golangci-lint
   footer: >-
     apt and dnf/yum package repositories are available at
     [Packagecloud](https://packagecloud.io/golangci/golangci-lint).
@@ -12,12 +12,12 @@ release:
 builds:
   - binary: golangci-lint
     goos:
-      - darwin
-      - windows
+      #- darwin
+      #- windows
       - linux
-      - freebsd
-      - netbsd
-      - illumos
+      #- freebsd
+      #- netbsd
+      #- illumos
     goarch:
       - amd64
       - arm64
