@@ -20,15 +20,15 @@ builds:
       #- illumos
     goarch:
       - amd64
-      - arm64
-      - arm
-      - 386
-      - ppc64le
-      - s390x
-      - mips64
-      - mips64le
-      - riscv64
-      - loong64
+      #- arm64
+      #- arm
+      #- 386
+      #- ppc64le
+      #- s390x
+      #- mips64
+      #- mips64le
+      #- riscv64
+      #- loong64
     goarm:
       - 6
       - 7
@@ -52,7 +52,7 @@ archives:
     format_overrides:
       - goos: windows
         format: zip
-    name_template: '{{ .ProjectName }}-{{ .Version }}-{{ .Os }}-{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
+    name_template: "{{ .ProjectName }}-{{ .Version }}-{{ .Os }}-{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}"
     files:
       - LICENSE
       - README.md
@@ -61,17 +61,17 @@ snapshot:
   name_template: SNAPSHOT-{{ .Commit }}
 
 checksum:
-  name_template: '{{ .ProjectName }}-{{ .Version }}-checksums.txt'
+  name_template: "{{ .ProjectName }}-{{ .Version }}-checksums.txt"
 
 changelog:
   sort: asc
   filters:
     exclude:
-      - '(?i)^docs?:'
+      - "(?i)^docs?:"
       - '(?i)^docs\([^:]+\):'
       - '(?i)^docs\[[^:]+\]:'
-      - '^tests?:'
-      - '(?i)^dev:'
+      - "^tests?:"
+      - "(?i)^dev:"
       - '^build\(deps\): bump .* in /docs \(#\d+\)'
       - '^build\(deps\): bump .* in /\.github/peril \(#\d+\)'
       - Merge pull request
@@ -79,7 +79,7 @@ changelog:
 
 source:
   enabled: true
-  name_template: '{{ .ProjectName }}-{{ .Version }}-source'
+  name_template: "{{ .ProjectName }}-{{ .Version }}-source"
 
 brews:
   - tap:
@@ -101,8 +101,7 @@ brews:
       system "#{bin}/golangci-lint --version"
 
 nfpms:
-  -
-    id: golangci-lint-nfpms
+  - id: golangci-lint-nfpms
     package_name: golangci-lint
     file_name_template: "{{ .ProjectName }}-{{ .Version }}-{{ .Os }}-{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}"
     homepage: https://golangci-lint.run/
@@ -130,10 +129,10 @@ nfpms:
         packager: rpm
     overrides:
       deb:
-        suggests:
+        recommends:
           - golang-go
       rpm:
-        suggests:
+        recommends:
           - /usr/bin/go
     rpm:
       group: Development/Tools
