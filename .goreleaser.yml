@@ -109,6 +109,31 @@ nfpms:
     maintainer: "golangci-lint Team <golangci-releaser@users.noreply.github.com>"
     description: Fast linters Runner for Go
     license: GPLv3
+    section: devel
     formats:
       - deb
       - rpm
+    umask: 0o022
+    contents:
+      - src: LICENSE
+        dst: /usr/share/doc/golangci-lint/copyright
+        packager: deb
+      - src: README.md
+        dst: /usr/share/doc/golangci-lint/README.md
+        packager: deb
+      - src: LICENSE
+        dst: /usr/share/doc/golangci-lint/LICENSE
+        type: license
+      - src: README.md
+        dst: /usr/share/doc/golangci-lint/README.md
+        type: readme
+        packager: rpm
+    overrides:
+      deb:
+        suggests:
+          - golang-go
+      rpm:
+        suggests:
+          - /usr/bin/go
+    rpm:
+      group: Development/Tools
