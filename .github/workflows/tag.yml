@@ -32,7 +32,7 @@ jobs:
         run: |
           gem install --no-document --user-install --bindir ~/.local/bin package_cloud
           export CLICOLOR_FORCE=1
-          ~/.local/bin/package_cloud push ${{ github.repository }}/any/any dist/*.deb
+          ~/.local/bin/package_cloud push ${{ github.repository }}/any/any $(ls -1 dist/*.deb | grep -vF armv6)
           ~/.local/bin/package_cloud push ${{ github.repository }}/rpm_any/rpm_any dist/*.rpm
         env:
           PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}
